@@ -15,7 +15,7 @@ Plugin 'vim-airline/vim-airline-themes'
 " Code Completions
 "------------------
 Bundle 'Shougo/neocomplcache.vim'
-Bundle 'garbas/vim-snipmate'
+Bundle 'honza/vim-snippets'
 Bundle 'ervandew/supertab'
 Bundle 'scrooloose/snipmate-snippets'
 Bundle 'mattn/emmet-vim'
