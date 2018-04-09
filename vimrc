@@ -7,7 +7,7 @@ set encoding=utf-8
 " enable filetype dectection and ft specific plugin/indent
 filetype plugin indent on
 
-" enable syntax hightlight and completion 
+" enable syntax hightlight and completion
 syntax enable
 syntax on
 
@@ -18,7 +18,7 @@ let g:solarized_termcolors=256
 set t_Co=256
 set background=dark
 let g:solarized_contrast = "high"
-let g:solarized_visibility= "high" 
+let g:solarized_visibility= "high"
 colorscheme solarized
 hi Normal ctermbg=NONE
 
@@ -72,7 +72,7 @@ set gcr=a:block-blinkon0
 set autoindent
 set smartindent     " indent when
 set tabstop=4       " tab width
-set softtabstop=4   " backspace & 
+set softtabstop=4   " backspace &
 set shiftwidth=4    " indent width
 "set textwidth=79
 set expandtab       " expand tab to space
@@ -115,6 +115,21 @@ let g:rbpt_colorpairs = [
 let g:rbpt_max = 16
 autocmd Syntax lisp,scheme,clojure,racket RainbowParenthesesToggle
 
+if has('python')
+  let s:python_version = 2
+  let g:jedi#force_py_version = 2
+  let g:syntastic_python_python_exec = 'python2'
+  let g:pymode_python = 'python2'
+elseif has('python3')
+  let s:python_version = 3
+  let g:jedi#force_py_version = 3
+  let g:syntastic_python_python_exec = 'python3'
+  let g:pymode_python = 'python3'
+else
+  let s:python_version = 0
+  let g:loaded_jedi = 1
+endif
+
 " tabbar
 let g:Tb_MaxSize = 2
 let g:Tb_TabWrap = 1
@@ -130,7 +145,7 @@ let g:EasyMotion_leader_key = '<Leader>'
 let g:tagbar_left=1
 let g:tagbar_width=30
 let g:tagbar_autofocus = 1
-let g:tagbar_sort = 0 
+let g:tagbar_sort = 0
 let g:tagbar_compact = 1
 " tag for coffee
 if executable('coffeetags')
@@ -207,7 +222,7 @@ smap <C-l> <Plug>(neocomplcache_snippets_force_jump)
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+" autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType c setlocal omnifunc=ccomplete#Complete
 autocmd FileType java set omnifunc=javacomplete#Complete
 
