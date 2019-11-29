@@ -89,6 +89,9 @@ Bundle 'tpope/vim-markdown'
 "------- Python -------
 Bundle 'nvie/vim-flake8'
 
+"------- Go -------"
+Bundle 'fatih/vim-go'
+
 "------- FPs ------
 Bundle 'kien/rainbow_parentheses.vim'
 " Bundle 'wlangstroth/vim-racket'
